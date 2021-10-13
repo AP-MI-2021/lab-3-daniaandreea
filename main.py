@@ -66,7 +66,7 @@ def test_all_prime():
 test_all_prime()
 
 
-def get_longest_sublist_all_prime(lst):
+def get_longest_all_primes(lst):
     """
     Determină cea mai lungă subsecvență cu toate numerele prime.
     :param lst: lista dată
@@ -82,13 +82,13 @@ def get_longest_sublist_all_prime(lst):
     return result
 
 
-def test_get_longest_sublist_all_prime():
-    assert get_longest_sublist_all_prime([1, 2, 10, 7, 5, 666013]) == [7, 5, 666013]
-    assert get_longest_sublist_all_prime([]) == []
-    assert get_longest_sublist_all_prime([2]) == [2]
+def test_get_all_primes():
+    assert test_get_all_primes([1, 2, 10, 7, 5, 666013]) == [7, 5, 666013]
+    assert test_get_all_primes([]) == []
+    assert test_get_all_primes([2]) == [2]
 
 
-test_get_longest_sublist_all_prime()
+test_get_all_primes()
 
 
 def nr_of_divisors(num):
@@ -136,7 +136,7 @@ def test_all_equal_nr_of_divisors():
 test_all_equal_nr_of_divisors()
 
 
-def get_longest_sublist_all_equal_nr_of_divisors(lst):
+def get_longest_same_div_count(lst):
     """
     Determină cea mai lungă susecvență formată doar din elemente cu același număr de divizori.
     :param lst: lista dată
@@ -152,13 +152,13 @@ def get_longest_sublist_all_equal_nr_of_divisors(lst):
     return result
 
 
-def test_get_longest_sublist_all_equal_nr_of_divisors():
-    assert get_longest_sublist_all_equal_nr_of_divisors([1, 3, 6, 7, 5, 666013]) == [7, 5, 666013]
-    assert get_longest_sublist_all_equal_nr_of_divisors([]) == []
-    assert get_longest_sublist_all_equal_nr_of_divisors([2]) == [2]
+def test_get_longest_same_div_count():
+    assert get_longest_same_div_count([1, 3, 6, 7, 5, 666013]) == [7, 5, 666013]
+    assert get_longest_same_div_count([]) == []
+    assert get_longest_same_div_count([2]) == [2]
 
 
-test_get_longest_sublist_all_equal_nr_of_divisors()
+test_get_longest_same_div_count()
 
 
 def is_palindrome(num):
@@ -180,7 +180,7 @@ def is_palindrome(num):
         else:
             return False
     else:
-        return False
+        return True
 
 
 def test_is_palindrome():
@@ -215,7 +215,7 @@ def test_all_palindrome():
 test_all_palindrome()
 
 
-def get_longest_sublist_all_palindrome(lst):
+def get_longest_all_palindromes(lst):
     """
     Determină cea mai lungă susecvență cu palindroame.
     :param lst: lista dată
@@ -231,13 +231,13 @@ def get_longest_sublist_all_palindrome(lst):
     return result
 
 
-def test_longest_sublist_all_palindrome():
-    assert get_longest_sublist_all_palindrome([11, 202, 4, 131, 4554, 888, 17]) == [131, 4554, 888]
-    assert get_longest_sublist_all_palindrome([414]) == [414]
-    assert get_longest_sublist_all_palindrome([1, 2, 4, 5]) == []
+def test_get_longest_all_palindromes():
+    assert get_longest_all_palindromes([11, 202, 4, 131, 4554, 888, 17]) == [131, 4554, 888]
+    assert get_longest_all_palindromes([414]) == [414]
+    assert get_longest_all_palindromes([1, 2, 4, 5]) == []
 
 
-test_longest_sublist_all_palindrome()
+test_get_longest_all_palindromes()
 
 
 def read_list():
@@ -265,15 +265,15 @@ def main():
         if option == '1':
             lst = read_list()
         elif option == '2':
-            result = get_longest_sublist_all_prime(lst)
+            result = get_longest_all_primes(lst)
             print('Cea mai lungă subsecvență cu toate numerele prime este: ')
             print(result)
         elif option == '3':
-            result = get_longest_sublist_all_equal_nr_of_divisors(lst)
+            result = get_longest_same_div_count(lst)
             print('Cea mai lungă subsecvență formată doar din elemente cu același număr de divizori este: ')
             print(result)
         elif option == '4':
-            result = get_longest_sublist_all_palindrome(lst)
+            result = get_longest_all_palindromes(lst)
             print('Cea mai lungă subsecvență cu palindroame este: ')
             print(result)
         elif option == 'x':
