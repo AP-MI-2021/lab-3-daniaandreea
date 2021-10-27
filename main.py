@@ -83,9 +83,9 @@ def get_longest_all_primes(lst):
 
 
 def test_get_all_primes():
-    assert test_get_all_primes([1, 2, 10, 7, 5, 666013]) == [7, 5, 666013]
-    assert test_get_all_primes([]) == []
-    assert test_get_all_primes([2]) == [2]
+    assert get_longest_all_primes([1, 2, 10, 7, 5, 666013]) == [2,7,5,666013]
+    assert get_longest_all_primes([1]) == []
+    assert get_longest_all_primes([2]) == [2]
 
 
 test_get_all_primes()
@@ -153,7 +153,7 @@ def get_longest_same_div_count(lst):
 
 
 def test_get_longest_same_div_count():
-    assert get_longest_same_div_count([1, 3, 6, 7, 5, 666013]) == [7, 5, 666013]
+    assert get_longest_same_div_count([1, 3, 6, 7, 5, 666013]) == [3, 7, 5, 666013]
     assert get_longest_same_div_count([]) == []
     assert get_longest_same_div_count([2]) == [2]
 
