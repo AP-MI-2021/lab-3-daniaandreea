@@ -83,7 +83,7 @@ def get_longest_all_primes(lst):
 
 
 def test_get_all_primes():
-    assert get_longest_all_primes([1, 2, 10, 7, 5, 666013]) == [2,7,5,666013]
+    assert get_longest_all_primes([1,2,5,7,88,77,66,101,2]) == [2, 5, 7]
     assert get_longest_all_primes([1]) == []
     assert get_longest_all_primes([2]) == [2]
 
@@ -153,7 +153,7 @@ def get_longest_same_div_count(lst):
 
 
 def test_get_longest_same_div_count():
-    assert get_longest_same_div_count([1, 3, 6, 7, 5, 666013]) == [3, 7, 5, 666013]
+    assert get_longest_same_div_count([1,2,5,7,88,77,66,101,2]) == [2, 5, 7]
     assert get_longest_same_div_count([]) == []
     assert get_longest_same_div_count([2]) == [2]
 
@@ -186,7 +186,7 @@ def is_palindrome(num):
 def test_is_palindrome():
     assert is_palindrome(1212) is False
     assert is_palindrome(5555) is True
-    assert is_palindrome(4) is False
+    assert is_palindrome(4) is True
     assert is_palindrome(9669) is True
 
 
@@ -232,9 +232,9 @@ def get_longest_all_palindromes(lst):
 
 
 def test_get_longest_all_palindromes():
-    assert get_longest_all_palindromes([11, 202, 4, 131, 4554, 888, 17]) == [131, 4554, 888]
+    assert get_longest_all_palindromes([11, 202, 4, 131, 4554, 888, 17]) == [11, 202, 4, 131, 4554, 888]
     assert get_longest_all_palindromes([414]) == [414]
-    assert get_longest_all_palindromes([1, 2, 4, 5]) == []
+    assert get_longest_all_palindromes([1, 2, 4, 5]) == [1, 2, 4, 5]
 
 
 test_get_longest_all_palindromes()
